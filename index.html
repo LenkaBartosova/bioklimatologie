@@ -185,9 +185,8 @@
     <div class="intro">
       <h3>Klimatologická seminární práce 2026/2027</h3>
       <p>
-        Cílem seminární práce je samostatné zpracování a vyhodnocení zadaných klimatologických údajů pro vybranou 
-        lokalitu a období. Každý student bude během semestru pracovat samostatně právě na datech ze své vybrané lokality. 
-        Na jednotlivých cvičeních budeme ale postupovat společně a během semestru postupně projdeme zadané úkoly. 
+        Cílem seminární práce je samostatné zpracování a klimatologické
+        vyhodnocení zadaných údajů pro vybranou lokalitu a období.
       </p>
       <p>
         <strong>Způsob odevzdání:</strong> tištěná práce.
@@ -199,17 +198,190 @@
   <section id="ukoly">
     <h2>Úkoly</h2>
 
-    <details>
-      <summary>Úkol 1 - Zadání a získání dat</summary>
-      <div class="details-content">
-        <p><strong>Cílem cvičení je vybrat si stanici se kterou budu v rámci semestru pracovat a získat výchozí data pro další práci.
-Na konci cvičení mám MS Excel soubor s měsíčními daty pro průměrné teploty vzduchu a sumy srážek pro moji vybranou stanici.</strong></p>
-        
-        <h4>DŮLEŽITÉ ODKAZY</h4>
 
-        <li> Mapa stanic Českého hydrometeorologického ústavu: Mapa stanic <a href="https://www.chmi.cz/namerena-data/umisteni-mericich-stanic/meteorologicke?c=50.0000,15.8258,8.6548&l=kraje,vse,ZTM"> ZDE </a> </li>
-        <li> Metadatový soubor pro vyhledání identifikátoru stanic: Metadata ZDE </li>
-        <li> Datový repozitář ČHMÚ: <a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/data/"> Datový repozitář ZDE </a> </li>
+    <details>
+      <summary>Úkol 1 – Získání dat</summary>
+      <div class="details-content">
+
+        <h3>Postup získání dat</h3>
+
+        <ol>
+          <li>
+            Pro práci ve cvičení a na seminární práci vytvořím nový MS Excel soubor,
+            který pojmenuju jako <strong>PrijmeniJmeno_Bioklimatologie.xlsx</strong>
+            (uložím si ho, vím kde je, budu ho potřebovat každé cvičení).
+          </li>
+        </ol>
+
+        <p>
+          Nyní si potřebuji vybrat nějakou stanici, která má data teploty vzduchu
+          i srážek za celé období posledních dvou klimatických normálů,
+          tzn. <strong>1961–1990</strong> i <strong>1991–2020</strong>.
+          S těmito daty budu pracovat po zbytek semestru.
+          Každý student ve cvičení si vybere jinou stanici.
+        </p>
+
+        <ol start="2">
+          <li>
+            Na mapě stanic vyberu stanici
+            <a href="https://www.chmi.cz/namerena-data/umisteni-mericich-stanic/meteorologicke?c=50.0000,15.8258,7.5088&amp;l=kraje,vse,ZTM" target="_blank">
+              Mapa stanic ZDE
+            </a>.
+
+            <ol>
+              <li>
+                Na mapě vidím spoustu bodů, každý z nich představuje nějakou meteostanici.
+                V nabídce vpravo „Výběr vrstvy“ klikneme na „Teplota“
+                (stanice měřící teplotu obvykle měří i úhrn srážek, takže nejspíš bude mít oboje).
+                Vyberu si bod–stanici a kliknu na něj levým tlačítkem myši a dále rozkliknu
+                „Detail“ stanice, což mě přivede na stránku konkrétní stanice.
+              </li>
+
+              <li>
+                Pokud vidím vlevo nahoře položky vedle záložky „Počasí“ také i
+                <strong>„Teplota“</strong> a <strong>„Srážky“</strong>, tak tím mám potvrzeno,
+                že stanice by měla měřit obě tyto proměnné. Teď potřebuji ověřit, zda tato stanice
+                má data teploty i srážek pro celé obě období
+                <strong>1961–1990 a 1991–2020</strong>.
+              </li>
+
+              <li>
+                Kliknu vlevo nahoře na „Historická data“, což mě přenese na další stránku,
+                kde vidím tabulku „Dlouhodobé průměry“ a v ní hodnoty pro
+                „Průměrná roční teplota vzduchu“ i pro „Průměrný roční úhrn srážek“
+                a za obě normálová období 1961–1990 i 1991–2020. Tak mám vyhráno –
+                data z této stanice mají dostatečně dlouhý záznam a můžu je použít (stáhnout).
+              </li>
+
+              <li>
+                Pokud vybraná stanice nemá data v plné délce 1961–1990 a 1991–2020
+                pro teplotu vzduchu i srážky, tak se vracím k bodu 2.1 a zkouším najít jinou stanici.
+              </li>
+
+              <li>
+                Vrátím se o úroveň výš a v sekci „Informace o stanici“ si poznačím
+                GPS pozici, nadmořskou výšku a i ID (kód) stanice, např. P3VLAS01.
+              </li>
+
+              <li>
+                Vybranou stanici nahlásím vyučujícímu.
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <p><strong>Pro jistotu to ještě nezávisle ověřím následujícím postupem:</strong></p>
+
+        <ol start="3">
+          <li>
+            Stáhnu si z odkazu soubor s metadaty o stanicích
+            <a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/metadata/meta1.csv" target="_blank">
+              Metadata ZDE
+            </a>.
+
+            <ol>
+              <li>Otevřu metadatový soubor v MS Excel.</li>
+
+              <li>
+                Vyhledám v souboru svou vybranou stanici pomocí ID stanice, které je ve sloupci B.
+                Stisknu <strong>CTRL+F</strong>, vložím do vyhledávacího pole ID stanice a stisknu Enter.
+                Jedna stanice může zabírat několik řádků pod sebou. V každém řádku je uvedeno období,
+                po které stanice měřila – začátek období je ve sloupci C a konec ve sloupci D.
+                Pokud poslední období ve sloupci D končí 3999, znamená to, že stanice měří do současnosti.
+              </li>
+
+              <li>
+                Ověřím, že stanice měří kontinuálně od roku 1961 (případně starší datum).
+                Pokud ne, raději zvolím jinou → jdu na bod 2.1.
+              </li>
+
+              <li>Poznačím si interní kód stanice (sloupec A „WSI“).</li>
+
+              <li>
+                Zkontroluju si souřadnice stanice (sloupce F „GEOGR1“ a G „GEOGR2“)
+                a nadmořskou výšku (sloupec H „ELEVATION“), jestli to sedí s tím,
+                co jsem si poznačil v bodu 2.5.
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            Vrátím se na stránky datového repozitáře
+            <a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/data/" target="_blank">
+              Datový repozitář ZDE
+            </a>.
+
+            <ol>
+              <li>Volím složku <strong>monthly</strong>.</li>
+
+              <li>
+                Budeme pracovat se dvěma složkami – <strong>temperature</strong> a
+                <strong>precipitation</strong> (postup bude stejný, začneme teplotou).
+              </li>
+
+              <li>
+                Nyní využiji svůj interní kód stanice (<em>viz body 2.5 nebo 3.4</em>)
+                a pomocí něj vyhledám příslušné soubory (<strong>CTRL+F</strong>).
+              </li>
+
+              <li>
+                Zajímá nás pouze soubor označený „T“
+                (nezajímá nás: TMA, TMI, TMInoc, TPM) a ten stáhneme.
+              </li>
+
+              <li>Zopakuji postup získání dat pro srážky.</li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Příprava vstupních dat</strong>
+
+            <ol>
+              <li>Otevřu stažený CSV soubor v MS Excel.</li>
+
+              <li>
+                Rozdělíme data do sloupců – v Excelu záložka Data, pak „Text do sloupců“,
+                nastavím oddělovač sloupců (středník, nebo čárka). Zkontroluju si hodnoty
+                čísla ve sloupci „VALUE“ – jestli tam nevidím žádné římské číslice
+                (např. IV, XII). Excel možná bude převádět vaše čísla na datumy.
+                Pokud ano, zavřu soubor (bez uložení změn) a nejdříve upravím data dle bodu
+                „Úprava dat“ na konci zadání), případně použiju
+                <a href="https://milanfischer.github.io/vyuka/csv2xlsx.html" target="_blank">
+                  převodník csv souborů na xlsx
+                </a>,
+                který by měl zvládnout udělat výše uvedené za mě.
+              </li>
+
+              <li>
+                U teploty nezapomenu vyfiltrovat pouze průměrné hodnoty
+                („AVG“ – sloupce E a F): výsledkem jsou měsíční hodnoty průměrné
+                teploty vzduchu ve všech letech dostupných pro moji stanici.
+              </li>
+
+              <li>
+                Data ze sloupců C („YEAR“), D („MONTH“) a G („VALUE“)
+                zkopíruji do připraveného Excelu (viz <strong>Krok 1</strong>)
+                na první list.
+              </li>
+
+              <li>Sloupec „VALUE“ přejmenuji na <strong>TAVG</strong>.</li>
+
+              <li>
+                Zopakuji postup pro srážky (hodnota „SUM“ ze sloupce F „MDFUNCTION“).
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <h3>Bonus</h3>
+
+        <ol start="6">
+          <li>
+            Z dat srážek a průměrných denních teplot si vytvořím jednoduchý spojnicový graf
+            a podívám se na průběh hodnot v čase.
+          </li>
+        </ol>
+
       </div>
     </details>
 
