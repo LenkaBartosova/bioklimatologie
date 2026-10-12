@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bioklimatologie – Klimatologická seminární práce 2026/2027</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bioklimatologie – Klimatologická seminární práce 2026/2027</title>
+<style>
     :root {
       --green: #315c4b;
       --green-light: #eaf1ed;
@@ -151,195 +152,184 @@
     }
   </style>
 </head>
-
 <body>
-
 <header>
-  <h1>Bioklimatologie</h1>
-  <p>Klimatologická seminární práce 2026/2027</p>
+<h1>Bioklimatologie</h1>
+<p>Klimatologická seminární práce 2026/2027</p>
 </header>
-
 <nav>
-  <a href="#zadani">Zadání</a>
-  <a href="#ukoly">Úkoly</a>
-  <a href="#kapitoly">Kapitoly</a>
-  <a href="#forma">Forma práce</a>
-  <a href="#termin">Termín</a>
-  <a href="#zdroje">Zdroje</a>
-  <a href="#dalsi">Další informace</a>
+<a href="#zadani">Zadání</a>
+<a href="#ukoly">Úkoly</a>
+<a href="#kapitoly">Kapitoly</a>
+<a href="#forma">Forma práce</a>
+<a href="#termin">Termín</a>
+<a href="#zdroje">Zdroje</a>
+<a href="#dalsi">Další informace</a>
 </nav>
-
 <main>
-
-  <div class="intro">
-    <strong>Informace k seminární práci</strong>
-    <p>
+<div class="intro">
+<strong>Informace k seminární práci</strong>
+<p>
       Na této stránce naleznete zadání seminární práce, jednotlivé úkoly,
       požadavky na formu zpracování, strukturu tištěné práce a další důležité informace.
     </p>
-  </div>
-
+</div>
 <!-- HLAVNÍ OBSAH WEBU – text zde budeš později sama upravovat -->
-  <section id="zadani">
-    <h2>Zadání</h2>
-    <div class="intro">
-      <h3>Klimatologická seminární práce 2026/2027</h3>
-      <p>
+<section id="zadani">
+<h2>Zadání</h2>
+<div class="intro">
+<h3>Klimatologická seminární práce 2026/2027</h3>
+<p>
         Cílem seminární práce je samostatné zpracování a klimatologické
         vyhodnocení zadaných údajů pro vybranou lokalitu a období.
       </p>
-      <p>
-        <strong>Způsob odevzdání:</strong> tištěná práce.
+<p>
+<strong>Způsob odevzdání:</strong> tištěná práce.
       </p>
-    </div>
-  </section>
-
-  <!-- ÚKOLY – zde budeš později doplňovat názvy a zadání -->
-  <section id="ukoly">
-    <h2>Úkoly</h2>
-
-
-    <details>
-      <summary>Úkol 1 – Získání dat</summary>
-      <div class="details-content">
-
-        <h3>Postup získání dat</h3>
-
-        <ol>
-          <li>
+</div>
+</section>
+<!-- ÚKOLY – zde budeš později doplňovat názvy a zadání -->
+<section id="ukoly">
+<h2>Úkoly</h2>
+<details>
+<summary>Úkol 1 – Získání dat</summary>
+<div class="details-content">
+<h3>DŮLEŽITÉ ODKAZY</h3>
+<ul>
+<li>
+            Mapa stanic Českého hydrometeorologického ústavu:
+            <a href="https://www.chmi.cz/namerena-data/umisteni-mericich-stanic/meteorologicke?c=50.0000,15.8258,7.5088&amp;l=kraje,vse,ZTM" target="_blank">
+              Mapa stanic ZDE
+            </a>
+</li>
+<li>
+            Metadatový soubor pro vyhledání identifikátoru stanic:
+            <a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/metadata/meta1.csv" target="_blank">
+              Metadata ZDE
+            </a>
+</li>
+<li>
+            Datový repozitář ČHMÚ:
+            <a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/data/" target="_blank">
+              Datový repozitář ZDE
+            </a>
+</li>
+</ul>
+<h3>Postup získání dat</h3>
+<ol>
+<li>
             Pro práci ve cvičení a na seminární práci vytvořím nový MS Excel soubor,
             který pojmenuju jako <strong>PrijmeniJmeno_Bioklimatologie.xlsx</strong>
             (uložím si ho, vím kde je, budu ho potřebovat každé cvičení).
           </li>
-        </ol>
-
-        <p>
+</ol>
+<p>
           Nyní si potřebuji vybrat nějakou stanici, která má data teploty vzduchu
           i srážek za celé období posledních dvou klimatických normálů,
           tzn. <strong>1961–1990</strong> i <strong>1991–2020</strong>.
           S těmito daty budu pracovat po zbytek semestru.
           Každý student ve cvičení si vybere jinou stanici.
         </p>
-
-        <ol start="2">
-          <li>
+<ol start="2">
+<li>
             Na mapě stanic vyberu stanici
             <a href="https://www.chmi.cz/namerena-data/umisteni-mericich-stanic/meteorologicke?c=50.0000,15.8258,7.5088&amp;l=kraje,vse,ZTM" target="_blank">
               Mapa stanic ZDE
             </a>.
 
             <ol>
-              <li>
+<li>
                 Na mapě vidím spoustu bodů, každý z nich představuje nějakou meteostanici.
                 V nabídce vpravo „Výběr vrstvy“ klikneme na „Teplota“
                 (stanice měřící teplotu obvykle měří i úhrn srážek, takže nejspíš bude mít oboje).
                 Vyberu si bod–stanici a kliknu na něj levým tlačítkem myši a dále rozkliknu
                 „Detail“ stanice, což mě přivede na stránku konkrétní stanice.
               </li>
-
-              <li>
+<li>
                 Pokud vidím vlevo nahoře položky vedle záložky „Počasí“ také i
                 <strong>„Teplota“</strong> a <strong>„Srážky“</strong>, tak tím mám potvrzeno,
                 že stanice by měla měřit obě tyto proměnné. Teď potřebuji ověřit, zda tato stanice
                 má data teploty i srážek pro celé obě období
                 <strong>1961–1990 a 1991–2020</strong>.
               </li>
-
-              <li>
+<li>
                 Kliknu vlevo nahoře na „Historická data“, což mě přenese na další stránku,
                 kde vidím tabulku „Dlouhodobé průměry“ a v ní hodnoty pro
                 „Průměrná roční teplota vzduchu“ i pro „Průměrný roční úhrn srážek“
                 a za obě normálová období 1961–1990 i 1991–2020. Tak mám vyhráno –
                 data z této stanice mají dostatečně dlouhý záznam a můžu je použít (stáhnout).
               </li>
-
-              <li>
+<li>
                 Pokud vybraná stanice nemá data v plné délce 1961–1990 a 1991–2020
                 pro teplotu vzduchu i srážky, tak se vracím k bodu 2.1 a zkouším najít jinou stanici.
               </li>
-
-              <li>
+<li>
                 Vrátím se o úroveň výš a v sekci „Informace o stanici“ si poznačím
                 GPS pozici, nadmořskou výšku a i ID (kód) stanice, např. P3VLAS01.
               </li>
-
-              <li>
+<li>
                 Vybranou stanici nahlásím vyučujícímu.
               </li>
-            </ol>
-          </li>
-        </ol>
-
-        <p><strong>Pro jistotu to ještě nezávisle ověřím následujícím postupem:</strong></p>
-
-        <ol start="3">
-          <li>
+</ol>
+</li>
+</ol>
+<p><strong>Pro jistotu to ještě nezávisle ověřím následujícím postupem:</strong></p>
+<ol start="3">
+<li>
             Stáhnu si z odkazu soubor s metadaty o stanicích
             <a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/metadata/meta1.csv" target="_blank">
               Metadata ZDE
             </a>.
 
             <ol>
-              <li>Otevřu metadatový soubor v MS Excel.</li>
-
-              <li>
+<li>Otevřu metadatový soubor v MS Excel.</li>
+<li>
                 Vyhledám v souboru svou vybranou stanici pomocí ID stanice, které je ve sloupci B.
                 Stisknu <strong>CTRL+F</strong>, vložím do vyhledávacího pole ID stanice a stisknu Enter.
                 Jedna stanice může zabírat několik řádků pod sebou. V každém řádku je uvedeno období,
                 po které stanice měřila – začátek období je ve sloupci C a konec ve sloupci D.
                 Pokud poslední období ve sloupci D končí 3999, znamená to, že stanice měří do současnosti.
               </li>
-
-              <li>
+<li>
                 Ověřím, že stanice měří kontinuálně od roku 1961 (případně starší datum).
                 Pokud ne, raději zvolím jinou → jdu na bod 2.1.
               </li>
-
-              <li>Poznačím si interní kód stanice (sloupec A „WSI“).</li>
-
-              <li>
+<li>Poznačím si interní kód stanice (sloupec A „WSI“).</li>
+<li>
                 Zkontroluju si souřadnice stanice (sloupce F „GEOGR1“ a G „GEOGR2“)
                 a nadmořskou výšku (sloupec H „ELEVATION“), jestli to sedí s tím,
                 co jsem si poznačil v bodu 2.5.
               </li>
-            </ol>
-          </li>
-
-          <li>
+</ol>
+</li>
+<li>
             Vrátím se na stránky datového repozitáře
             <a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/data/" target="_blank">
               Datový repozitář ZDE
             </a>.
 
             <ol>
-              <li>Volím složku <strong>monthly</strong>.</li>
-
-              <li>
+<li>Volím složku <strong>monthly</strong>.</li>
+<li>
                 Budeme pracovat se dvěma složkami – <strong>temperature</strong> a
                 <strong>precipitation</strong> (postup bude stejný, začneme teplotou).
               </li>
-
-              <li>
+<li>
                 Nyní využiji svůj interní kód stanice (<em>viz body 2.5 nebo 3.4</em>)
                 a pomocí něj vyhledám příslušné soubory (<strong>CTRL+F</strong>).
               </li>
-
-              <li>
+<li>
                 Zajímá nás pouze soubor označený „T“
                 (nezajímá nás: TMA, TMI, TMInoc, TPM) a ten stáhneme.
               </li>
-
-              <li>Zopakuji postup získání dat pro srážky.</li>
-            </ol>
-          </li>
-
-          <li>
-            <strong>Příprava vstupních dat</strong>
-
-            <ol>
-              <li>Otevřu stažený CSV soubor v MS Excel.</li>
-
-              <li>
+<li>Zopakuji postup získání dat pro srážky.</li>
+</ol>
+</li>
+<li>
+<strong>Příprava vstupních dat</strong>
+<ol>
+<li>Otevřu stažený CSV soubor v MS Excel.</li>
+<li>
                 Rozdělíme data do sloupců – v Excelu záložka Data, pak „Text do sloupců“,
                 nastavím oddělovač sloupců (středník, nebo čárka). Zkontroluju si hodnoty
                 čísla ve sloupci „VALUE“ – jestli tam nevidím žádné římské číslice
@@ -351,179 +341,176 @@
                 </a>,
                 který by měl zvládnout udělat výše uvedené za mě.
               </li>
-
-              <li>
+<li>
                 U teploty nezapomenu vyfiltrovat pouze průměrné hodnoty
                 („AVG“ – sloupce E a F): výsledkem jsou měsíční hodnoty průměrné
                 teploty vzduchu ve všech letech dostupných pro moji stanici.
               </li>
-
-              <li>
+<li>
                 Data ze sloupců C („YEAR“), D („MONTH“) a G („VALUE“)
                 zkopíruji do připraveného Excelu (viz <strong>Krok 1</strong>)
                 na první list.
               </li>
-
-              <li>Sloupec „VALUE“ přejmenuji na <strong>TAVG</strong>.</li>
-
-              <li>
+<li>Sloupec „VALUE“ přejmenuji na <strong>TAVG</strong>.</li>
+<li>
                 Zopakuji postup pro srážky (hodnota „SUM“ ze sloupce F „MDFUNCTION“).
               </li>
-            </ol>
+</ol>
+</li>
+</ol>
+<h3>Úprava dat (návod pro Windows)</h3>
+<ol>
+<li>Najdu si pomocí průzkumníku souborů stažená data ve formátu CSV.</li>
+<li>
+            Pravým tlačítkem myši otevřu na souboru kontextovou nabídku a zvolím
+            „Otevřít v aplikaci Poznámkový blok“.
           </li>
-        </ol>
-
-        <h3>Bonus</h3>
-
-        <ol start="6">
-          <li>
+<li>Data se otevřou v Poznámkovém bloku.</li>
+<li>
+            Zmáčknu současně klávesy <strong>CTRL</strong> a <strong>H</strong>
+            a otevře se mi nabídka „Najít a nahradit“.
+          </li>
+<li>
+            Nejdříve nahradím všechny symboly čárky (<strong>,</strong>) za symboly
+            středníku (<strong>;</strong>) a dám „Nahradit vše“.
+            Všechny čárky v souboru by nyní měly být změněny na středníky.
+          </li>
+<li>
+            Pak opakuji postup a nahradím všechny symboly tečky
+            (<strong>.</strong>) za symboly čárky (<strong>,</strong>).
+          </li>
+<li>
+            Uložím soubor (klávesová zkratka <strong>CTRL</strong> a <strong>S</strong>)
+            a otevřu ho v aplikaci MS Excel. Nyní by už mělo být vše v pořádku
+            a pokračuji filtrováním dat (bod 5.3).
+          </li>
+</ol>
+<h3>Bonus</h3>
+<ol start="6">
+<li>
             Z dat srážek a průměrných denních teplot si vytvořím jednoduchý spojnicový graf
             a podívám se na průběh hodnot v čase.
           </li>
-        </ol>
-
-      </div>
-    </details>
-
-    <details>
-      <summary>Úkol 2</summary>
-      <div class="details-content">
-        <p><strong>Podrobné zadání bude doplněno.</strong></p>
-      </div>
-    </details>
-
-    <details>
-      <summary>Úkol 3</summary>
-      <div class="details-content">
-        <p><strong>Podrobné zadání bude doplněno.</strong></p>
-      </div>
-    </details>
-
-    <details>
-      <summary>Úkol 4</summary>
-      <div class="details-content">
-        <p><strong>Podrobné zadání bude doplněno.</strong></p>
-      </div>
-    </details>
-  </section>
-
-  <section id="termin">
-    <h2>Termín odevzdání</h2>
-    <div class="intro">
-      <p><strong>Termín odevzdání:</strong> bude doplněno.</p>
-      <p><strong>Způsob odevzdání:</strong> tištěná práce.</p>
-    </div>
-  </section>
-
-  <section id="forma">
-    <h2>Forma zpracování tištěné práce</h2>
-    <div class="intro">
-      <ul>
-        <li>Celá práce bude zpracována jednotným fontem a jednotnou velikostí písma.</li>
-        <li>Každá tabulka bude řádně očíslována a bude mít svůj název.</li>
-        <li>Každý graf bude řádně očíslován a bude mít svůj název.</li>
-        <li>Grafy a tabulky musí být v textu práce citovány a musí na ně být uveden odkaz.</li>
-        <li>Další požadavky na formální úpravu budou doplněny.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- KAPITOLY TIŠTĚNÉ PRÁCE -->
-  <section id="kapitoly">
-    <h2>Kapitoly tištěné práce</h2>
-
-    <details>
-      <summary>Kapitola 1 – Charakteristika přírodních podmínek</summary>
-      <div class="details-content">
-        <p>
+</ol>
+</div>
+</details>
+<details style="display:none;">
+<summary>Úkol 2</summary>
+<div class="details-content">
+<p><strong>Podrobné zadání bude doplněno.</strong></p>
+</div>
+</details>
+<details style="display:none;">
+<summary>Úkol 3</summary>
+<div class="details-content">
+<p><strong>Podrobné zadání bude doplněno.</strong></p>
+</div>
+</details>
+<details style="display:none;">
+<summary>Úkol 4</summary>
+<div class="details-content">
+<p><strong>Podrobné zadání bude doplněno.</strong></p>
+</div>
+</details>
+</section>
+<section id="termin">
+<h2>Termín odevzdání</h2>
+<div class="intro">
+<p><strong>Termín odevzdání:</strong> bude doplněno.</p>
+<p><strong>Způsob odevzdání:</strong> tištěná práce.</p>
+</div>
+</section>
+<section id="forma">
+<h2 style="display:none;">Forma zpracování tištěné práce</h2>
+<div class="intro" style="display:none;">
+<ul>
+<li>Celá práce bude zpracována jednotným fontem a jednotnou velikostí písma.</li>
+<li>Každá tabulka bude řádně očíslována a bude mít svůj název.</li>
+<li>Každý graf bude řádně očíslován a bude mít svůj název.</li>
+<li>Grafy a tabulky musí být v textu práce citovány a musí na ně být uveden odkaz.</li>
+<li>Další požadavky na formální úpravu budou doplněny.</li>
+</ul>
+</div>
+</section>
+<!-- KAPITOLY TIŠTĚNÉ PRÁCE -->
+<section id="kapitoly">
+<h2 style="display:none;">Kapitoly tištěné práce</h2>
+<details style="display:none;">
+<summary>Kapitola 1 – Charakteristika přírodních podmínek</summary>
+<div class="details-content">
+<p>
           Práce bude uvedena obecnou charakteristikou přírodních
           (nikoliv hospodářských či ekonomických) podmínek regionu:
           tedy popisem geografických, geologických, půdních, botanických,
           zoologických, hydrologických a dalších poměrů v okolí vybrané
           lokality a širšího regionu.
         </p>
-        <div class="important">
-          <strong>Rozsah: 1–1,5 strany – ne více, ne méně!</strong>
-        </div>
-      </div>
-    </details>
-
-    <details>
-      <summary>Kapitola 2 – Zhodnocení klimatických podmínek</summary>
-      <div class="details-content">
-        <p>
+<div class="important">
+<strong>Rozsah: 1–1,5 strany – ne více, ne méně!</strong>
+</div>
+</div>
+</details>
+<details style="display:none;">
+<summary>Kapitola 2 – Zhodnocení klimatických podmínek</summary>
+<div class="details-content">
+<p>
           Na tuto úvodní textovou část bude navazovat slovní zhodnocení
           klimatických podmínek v zadaných periodách/letech na dané lokalitě
           s odkazy na grafy a tabulky vypracované v rámci seminární práce.
         </p>
-
-        <p>
+<p>
           Tato část je základem hodnocení kvality celé práce a proto jí věnujte
           zvýšenou pozornost. Vyhodnocení konkrétního ročníku spočívá především
           v jeho srovnání s dlouhodobými průměry.
         </p>
-
-        <p>
+<p>
           Kromě toho se cení zejména Vaše vlastní (avšak věcně správné!)
           postřehy a závěry. Text musí obsahovat odkazy na příslušné tabulky
           a grafy v textu.
         </p>
-
-        <div class="important">
-          <strong>
+<div class="important">
+<strong>
             Bez kvalitně zpracované textové části nebude seminární práce uznána!!
           </strong>
-          <br><br>
+<br/><br/>
           V případě dotazů, připomínek a nejasností se obracejte na cvičícího –
           na pozdější reklamace nebude brán zřetel.
         </div>
-
-        <div class="important">
-          <strong>Rozsah: min. 1 strana, max. 1,5 strany.</strong>
-        </div>
-      </div>
-    </details>
-
-    <details>
-      <summary>Kapitola 3 – Obrazová část</summary>
-      <div class="details-content">
-        <p>
+<div class="important">
+<strong>Rozsah: min. 1 strana, max. 1,5 strany.</strong>
+</div>
+</div>
+</details>
+<details style="display:none;">
+<summary>Kapitola 3 – Obrazová část</summary>
+<div class="details-content">
+<p>
           Na dvě textové kapitoly bude navazovat poslední obrazová část,
           kterou budou tvořit zejména grafy.
         </p>
-        <div class="important">
-          <strong>Rozsah: neomezeno.</strong>
-        </div>
-      </div>
-    </details>
-  </section>
+<div class="important">
+<strong>Rozsah: neomezeno.</strong>
+</div>
+</div>
+</details>
+</section>
+<!-- LITERATURA, ODKAZY A ZDROJE DAT -->
+<section id="zdroje">
+<h2>Literatura, odkazy a zdroje dat</h2><ul><li><a href="https://www.chmi.cz/namerena-data/umisteni-mericich-stanic/meteorologicke?c=50.0000,15.8258,7.5088&amp;l=kraje,vse,ZTM" rel="noopener noreferrer" target="_blank">Mapa stanic Českého hydrometeorologického ústavu</a></li><li><a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/metadata/meta1.csv" rel="noopener noreferrer" target="_blank">Metadatový soubor pro vyhledání identifikátoru stanic</a></li><li><a href="https://opendata.chmi.cz/meteorology/climate/historical_csv/data/" rel="noopener noreferrer" target="_blank">Datový repozitář ČHMÚ</a></li></ul>
 
-  <!-- LITERATURA, ODKAZY A ZDROJE DAT -->
-  <section id="zdroje">
-    <h2>Literatura, odkazy a zdroje dat</h2>
-    <div class="intro">
-      <p>
-        Zde bude uveden seznam doporučené literatury, internetových odkazů
-        a zdrojů klimatologických a dalších dat použitých při zpracování práce.
-      </p>
-    </div>
-  </section>
-
-  <section id="dalsi">
-    <h2>Další informace</h2>
-    <div class="intro">
-      <p>
+</section>
+<section id="dalsi">
+<h2>Další informace</h2>
+<div class="intro">
+<p>
         Zde budou postupně doplňovány další informace, upozornění,
         odpovědi na časté dotazy a případné změny zadání.
       </p>
-    </div>
-  </section>
-
+</div>
+</section>
 </main>
-
 <footer>
   Bioklimatologie · Klimatologická seminární práce 2026/2027
 </footer>
-
 </body>
 </html>
