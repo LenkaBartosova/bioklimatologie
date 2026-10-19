@@ -184,7 +184,7 @@
         vyhodnocení zadaných údajů pro vybranou lokalitu a období.
       </p>
 <p>
-<strong>Způsob odevzdání:</strong> bude doplněno</p>
+<strong>Způsob odevzdání:</strong> ústní prezentace</p>
 </div>
 </section>
 <!-- ÚKOLY – zde budeš později doplňovat názvy a zadání -->
@@ -393,11 +393,35 @@
 </ol>
 </div>
 </details>
-<details style="display:none;">
-<summary>Úkol 2</summary>
-<div class="details-content">
-<p><strong>Podrobné zadání bude doplněno.</strong></p>
-</div>
+<details>
+<summary>Úkol 2 – Radiace a teplota</summary>
+<p>Cílem cvičení je vysvětlit si základní terminologii k tématu slunečního záření (= solární radiace), pochopit vztah radiace a teploty vzduchu a otestovat si možnosti získání dat z jiných zdrojů, než je ČHMÚ.</p>
+<p><strong>Na konci cvičení mám MS Excel soubor s novým listem TeplotaRadiace, kde srovnám měsíční hodnoty solární radiace a teplot pro moji vybranou stanici.</strong></p>
+<p>Zdrojem dat pro dnešní cvičení jsou stránky <a href="https://www.copernicus.eu/cs" target="_blank">Copernicus</a>, což je program Evropské unie pro pozorování Země, který poskytuje bezplatná a systematická data o naší planetě a jejím prostředí prostřednictvím šesti tematických služeb pro širokou škálu uživatelů. Tyto služby monitorují atmosféru, mořské prostředí, pevninu, klima, bezpečnost a krizové situace a poskytují informace pro rozhodování v oblasti politiky, vědy a pro širokou veřejnost, tedy i pro nás. Odtud si stáhnu data globální radiace pro svoji stanici.</p>
+<p><strong>Postup práce krok za krokem:</strong></p>
+<p><strong>1. Stahuji data pro solární radiaci ze služby Copernicus</strong></p>
+<p><strong>1.1</strong> Jdu na stránky Copernicus <a href="https://ads.atmosphere.copernicus.eu/datasets/cams-solar-radiation-timeseries?tab=overview" target="_blank">Data k získání ZDE</a> a MUSÍM SE NEJPRVE REGISTROVAT MAILEM, díky čemuž budu moci službu využívat kdykoli v budoucnu. Zadejte tam např. univerzitní mail, bude se vás to ptát na víc věcí, zadejte nezbytné minimum, není to podstatné. Např. instituci (Mendelu), sektor (např. Research &amp; Education, anebo Other). Po registraci přijde potvrzovací mail. Až pak můžete přejít zpět na stránky Copernicus <a href="https://ads.atmosphere.copernicus.eu/datasets/cams-solar-radiation-timeseries?tab=overview" target="_blank">Data k získání ZDE</a> a vyberu záložku <strong>Download</strong>.</p>
+<p><strong>1.2</strong> Vyplním formulář pro získání dat s pomocí následující nápovědy:</p>
+<p><strong>1.3</strong> U výběru <strong>Sky type</strong> nezapomenu zvolit <strong>Both cloud-free and actual weather conditions</strong>.</p>
+<p><strong>1.4</strong> Zadám souřadnice své stanice s přesností na 2 desetinná místa (pokud jsem si minule neopsal souřadnice ze souboru meta1.csv, můžu tak učinit znovu, anebo si je najdu pomocí mapy.com/maps.google.com). Zkontroluji si, jestli jsem Latitude a Longitude zadal do správného políčka (= na mapě zkontroluji, že jsem souřadnice zadal správně a poloha puntíku cca odpovídá poloze mojí stanice).</p>
+<p><strong>1.5</strong> Zadám nadmořskou výšku své stanice (půjde to i bez ní).</p>
+<p><strong>1.6</strong> Jako rozpětí datumů zvolím <strong>2004-02-01 až 2026-09-30</strong>.</p>
+<p><strong>1.7</strong> U výběru <strong>Time step</strong> volím <strong>1 month</strong> (měsíční krok).</p>
+<p><strong>1.8</strong> U výběru <strong>Time reference</strong> volím <strong>True solar time</strong>.</p>
+<p><strong>1.9</strong> U výběru <strong>Data format</strong> volím <strong>CSV</strong>.</p>
+<p><strong>1.10</strong> Potvrdím potřebné souhlasy a požádám o data klikem na <strong>Submit form</strong>. Vpravo kliknu na tlačítko <strong>Your Requests</strong> (Vaše požadavky) a budu pár minut čekat, než se data vygenerují. Jakmile se objeví tlačítko Download, tak si stáhnu vygenerovaný csv soubor. Budou se jmenovat jako změť písmen, např. <em>3c429be5c399383e3fb1cd2c8a57feb2.csv</em>.</p>
+<p><strong>2. Práce se staženými daty solární radiace</strong></p>
+<p><strong>2.1</strong> Stažený soubor otevřu v MS Excel. Zkontroluji, zda je tam celé období 1. 2. 2004–30. 09. 2026 a zda obsahuje sloupec <strong>GHI</strong>. Scroluju dolů na data a pokud vidím, že jsou data už rozdělená do sloupců a čísla vypadají správně, body 2.1 a 2.2 přeskočím. Jinak pomocí <strong>CTRL + H</strong> (<strong>Najít a nahradit</strong>) nahradím čárky středníky (;) a pak tečky čárkami, stejně jako na prvním cvičení s daty z ČHMÚ.</p>
+<p><strong>2.2</strong> Použiji trik s rozdělením dat do sloupců (vyberu sloupec <em>A</em> a na kartě <em>Data</em> zvolím <em>Text do sloupců</em>), kde mám středník (<strong>;</strong>) nebo čárku jako oddělovač.</p>
+<p><strong>2.3</strong> Prozkoumám hlavičku souboru (řádky začínající #) a co v ní vše můžu vidět za informace.</p>
+<p><strong>2.4</strong> Pro další postup budu potřebovat jen jediný sloupec, s hodnotami <strong>globální radiace</strong> označenými jako <strong>GHI</strong> (Global Horizontal Irradiance). Jednotka je <strong>Wh/m²</strong> (suma energie, která dopadla na 1 m² vodorovné plochy za daný měsíc). Pro čitelnější čísla si můžu hodnoty vydělit 1000 a dostanu <strong>kWh/m²</strong>.</p>
+<p><strong>2.5</strong> Označím hodnoty ze sloupců <strong>GHI</strong> a nakopíruji je na připravený/další list Excelu (který mám pojmenovaný <strong>TeplotaRadiace</strong>).</p>
+<p><strong>3. Porovnání dat měsíčních teplot a sum globální radiace</strong></p>
+<p><strong>3.1</strong> Pro snadné vizuální porovnání hodnot vytvořím spojnicový graf průběhu obou veličin v čase.</p>
+<p><strong>3.2</strong> Na listu, kde mám uložená data radiace (GHI), vložím také měsíční data teploty pro danou lokalitu. Vložím spojnicový graf (v Excelu karta <strong>Vložení</strong>).</p>
+<p><strong>3.3</strong> Rozdělím obě veličiny na dvě osy: pravý klik na graf → <strong>Změnit typ grafu</strong> → <strong>Kombinovaný</strong>.</p>
+<p><strong>3.4</strong> Obě veličiny zobrazím jako spojnicový graf a globální radiaci přesunu na <strong>vedlejší (sekundární) osu</strong>.</p>
+<p><strong>3.5</strong> Kompletní graf je čitelný a obsahuje minimálně: název, legendu, popisky obou os včetně jednotek (°C a Wh/m² nebo kWh/m²), uvedený zdroj/zdroje dat (ČHMÚ, CAMS/Copernicus).</p>
 </details>
 <details style="display:none;">
 <summary>Úkol 3</summary>
@@ -415,7 +439,7 @@
 <section id="termin">
 <h2>Termín odevzdání</h2>
 <div class="intro">
-<p><strong>Termín odevzdání:</strong> bude doplněno.</p>
+<p><strong>Termín odevzdání:</strong> 7. 12.</p>
 <p><strong>Způsob odevzdání:</strong> tištěná práce.</p>
 </div>
 </section>
