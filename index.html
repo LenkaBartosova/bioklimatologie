@@ -494,12 +494,57 @@
 </ul>
 </div>
 </details>
-<details style="display:none;">
-<summary>Úkol 4</summary>
+<details>
+<summary>Úkol 04 – Teplotní gradient a budoucí klima</summary>
 <div class="details-content">
-<p><strong>Podrobné zadání bude doplněno.</strong></p>
+<h3>TEPLOTNÍ GRADIENT</h3>
+<p><strong>1. Příprava pracovního Excelu</strong></p>
+<ul><li><strong>1.1</strong> Vytvořím si v Excelu nový list, který pojmenuji <strong>KlimatickyGradient</strong>.</li></ul>
+<p><strong>2. Popsání klimatického teplotního gradientu s pomocí Tabulek podnebí</strong></p>
+<ul>
+<li><strong>2.1</strong> Otevřu si Tabulky podnebí: buď <a href="https://www.intersucho.cz/runtime/cache/files/original/t/tabulky-podnebi-final-verze-na-tisk-20251022101851.pdf" target="_blank">stáhnu pdf (50 MB) ZDE</a>, anebo si vezmu papírovou kopii.</li>
+<li><strong>2.2</strong> Pomocí mapy vyberu 10 stanic s rozdílnými nadmořskými výškami (ideálně v okolí své stanice a s co největším rozpětím výšek, např. od nížiny po hory).</li>
+<li><strong>2.3</strong> Opíšu si jména stanic a nadmořské výšky z <strong>Abecedního seznamu klimatických stanic</strong> na list <strong>KlimatickyGradient</strong> (sloupce: Stanice, Nadmořská výška (m n. m.), Teplota (°C)).</li>
+<li><strong>2.4</strong> Opíšu průměrné roční teploty (<strong>Tabulka 1: Průměrná teplota vzduchu (°C) za období 1901-1950</strong>).</li>
+<li><strong>2.5</strong> V MS Excel vytvořím <strong>bodový (XY) graf</strong> z dat teploty (svislá osa) a nadmořské výšky (vodorovná osa). Pozor, ne spojnicový!</li>
+<li><strong>2.6</strong> Zobrazím spojnici trendu včetně rovnice (pravý klik na bod v grafu → „Přidat spojnici trendu“, vpravo v nabídce zaškrtnu „Lineární“ a dole „Zobrazit rovnici v grafu“).</li>
+<li><strong>2.7</strong> <strong>Jak číst rovnici</strong> y = ax + b: číslo „<strong>a</strong>“ je změna teploty (°C) na 1 metr výšky. Když ho vynásobím 100, dostanu změnu teploty na 100 m. Tím zjistím teplotní gradient v okolí své stanice.</li>
+</ul>
+<div class="important"><strong>Kontrolní bod:</strong><ul>
+<li>Mám 10 bodů s rozdílnou nadmořskou výškou, na ose X je výška (m n. m.), na ose Y je teplota (°C).</li>
+<li>Spojnice trendu klesá, číslo „<strong>a</strong>“ je záporné, řádově −0,005 až −0,007. To znamená pokles o cca 0,5 až 0,7 °C na každých 100 m výšky.</li>
+<li>Pokud je „a“ kladné nebo blízko nule, nejspíš mám prohozené osy nebo překlep v opsaných datech.</li>
+</ul></div>
+
+<h3>BUDOUCÍ KLIMA, zdroj dat climrisk.cz</h3>
+<p><strong>3. Příprava pracovního Excelu</strong></p>
+<ul><li><strong>3.1</strong> Vytvořím si v Excelu nový list, který pojmenuji <strong>BudouciKlima</strong>.</li></ul>
+<p><strong>4. Získání ročních dat pro všechny časové agregace z portálu ClimRisk</strong></p>
+<ul>
+<li><strong>4.1</strong> Otevřu portál <a href="https://www.climrisk.cz/" target="_blank">ClimRisk</a>.</li>
+<li><strong>4.2</strong> Vyberu <strong>Česká republika</strong>.</li>
+<li><strong>4.3</strong> V pravém menu vyberu jako parametr možnost <strong>Průměrná teplota vzduchu</strong>.</li>
+<li><strong>4.4</strong> V horním menu stránky vyberu položku <strong>Stahování dat</strong> a vyplním formulář pro stažení hodnot.</li>
+<li><strong>4.5</strong> Oblast: Česká republika, Podoblast: okres, ve kterém se nachází moje stanice, Region: katastrální území mojí stanice (většinou stejné jako název obce).</li>
+<li><strong>4.6</strong> V nabídce Agregace vyberu pouze rok.</li>
+<li><strong>4.7</strong> V nabídce Klimatická projekce vyberu <strong>všechna dostupná období</strong>.</li>
+<li><strong>4.8</strong> V nabídce Scénář vyberu některou z možností <strong>SSP126, SSP245, SSP370 nebo SSP585</strong> (zapamatuju si, kterou, a uvedu ji v názvu grafu).</li>
+<li><strong>4.9</strong> V nabídce Klimatická charakteristika vyberu <strong>Průměrná teplota vzduchu</strong> a <strong>Srážkový úhrn</strong>.</li>
+<li><strong>4.10</strong> Do políčka email zadám svoji mailovou adresu a nechám si zaslat data.</li>
+</ul>
+<p><strong>5. Práce se staženými daty a tvorba grafů</strong></p>
+<ul>
+<li><strong>5.1</strong> Data nakopíruju na list <strong>BudouciKlima</strong>.</li>
+<li><strong>5.2</strong> Pro roční hodnoty časových agregací scénářů budoucího vývoje klimatu vytvořím spojnicový graf průběhu včetně mediánu a všech percentilů.</li>
+</ul>
+<div class="important"><strong>Kontrolní bod (budoucí klima):</strong><ul>
+<li>V grafu vidím pro každé období medián a pásmo percentilů, medián leží mezi nejnižším a nejvyšším percentilem.</li>
+<li>Budoucí období jsou teplejší než současnost a vzdálenější budoucnost je teplejší než bližší.</li>
+<li>Hodnoty pro období kolem 2005 (1991-2020) by měly být podobné průměrné roční teplotě, kterou mám z ČHMÚ pro svoji stanici.</li>
+</ul></div>
 </div>
 </details>
+
 </section>
 <section id="termin">
 <h2>Termín odevzdání</h2>
