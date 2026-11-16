@@ -553,6 +553,69 @@
 </div>
 </details>
 
+
+<details>
+<summary>Úkol 5 – Analýza měsíčních teplot vzduchu a jejich trendů po dekádách (1961–2020)</summary>
+<div class="details-content">
+<p>Cílem cvičení je zjistit, o kolik stupňů se změnila průměrná teplota mezi jednotlivými dekádami v letech 1961–2020, a vytvořit grafy, které ukážou trend uvnitř každé dekády.</p>
+<p><strong>Na konci cvičení mám MS Excel soubor s tabulkou dekádních průměrů, rozdílů mezi dekádami a 6 grafů s trendy (jeden graf pro každou dekádu) a s hodnotami trendů v jednotlivých dekádách.</strong></p>
+
+<h3>Příprava dat</h3>
+<ol>
+<li>Na nový list v Excelu si nakopíruji měsíční hodnoty teploty. Ve sloupci <strong>A</strong> ponechám roky a ve sloupci <strong>B</strong> samotné hodnoty teplot. Na prvním řádku můžu nechat pojmenování sloupců: do buňky A1 napíšu „roky“ a do buňky B1 „teploty“.</li>
+<li>Do buňky <strong>C1</strong> napíšu „dekády“ a do buňky <strong>C2</strong> vložím vzorec <code>=CELÁ.ČÁST((A2-1)/10)*10+1</code>. Vzorec přiřadí každému roku začátek jeho dekády (1961 až 1970 → 1961, 1971 až 1980 → 1971, … 2011 až 2020 → 2011).</li>
+<li>Zkopíruju vzorec až dolů (úchopem v pravém dolním rohu buňky nebo dvojklikem na něj).</li>
+</ol>
+<div class="important"><strong>Kontrolní bod:</strong> Rok 1970 má ve sloupci Dekáda hodnotu <strong>1961</strong>, rok 1971 hodnotu <strong>1971</strong> a rok 2020 hodnotu <strong>2011</strong>.</div>
+
+<h3>Postup práce – změna teploty za dekádu</h3>
+<ol>
+<li>Spočítám průměrnou teplotu za dekádu.</li>
+<li>Vložím „kontingenční graf a tabulka“ a do ní vložím data ze sloupců <strong>B a C</strong> (tedy teploty a dekády).</li>
+<li>V nabídce <strong>Pole kontingenčního grafu</strong> přetáhnu položku <strong>Dekáda</strong> do boxu <strong>Osa kategorie</strong> a položku <strong>Teplota</strong> do boxu <strong>Hodnoty</strong>.</li>
+<li>U boxu Hodnoty změním v nabídce <strong>Nastavení polí hodnot…</strong> funkci ze Součtu na <strong>Průměr</strong> a potvrdím.</li>
+<li>Prohlédnu si vygenerovaný graf a vizuálně zhodnotím, jestli dává smysl (jaké hodnoty jsou na osách X a Y, jestli vidím rozumné průměrné teploty jednotlivých dekád atd.).</li>
+<li>Hodnoty z vygenerované kontingenční tabulky (jen šest řádků pro dekády 1961 až 2011, bez řádku Celkový součet) označím, zkopíruju (CTRL+C) a pomocí pravého kliknutí → <strong>Vložit jen hodnoty</strong> je vložím na volné místo v listu.</li>
+</ol>
+<div class="important"><strong>Kontrolní bod:</strong>
+<ul>
+<li>Tabulka má <strong>6 řádků</strong>.</li>
+<li>Průměry dekád jsou podobné ročnímu průměru teploty mé stanice (obvykle 5 až 11 °C).</li>
+<li>Když si dočasně přepnu Průměr na Počet, každá dekáda má <strong>120 hodnot</strong> (10 let × 12 měsíců).</li>
+</ul></div>
+<ol start="7">
+<li>Vedle zkopírované tabulky (obsahující 6 řádků s průměrnými teplotami za jednotlivé dekády) vytvořím další sloupec s nadpisem <strong>Změna (°C / dekáda)</strong>.</li>
+<li>Do řádku druhé dekády napíšu vzorec, který odečte teplotu předchozí dekády, např. <code>=B3-B2</code> (kde B2 a B3 jsou průměrné teploty dvou po sobě jdoucích dekád; písmena upravím podle toho, kam jsem tabulku vložil). Tím zjistím, o kolik °C se průměrná teplota zvýšila nebo snížila mezi dvěma dekádami.</li>
+<li>Zkopíruju vzorec dolů. První dekáda změnu nemá (nemá s čím srovnat).</li>
+</ol>
+
+<h3>Postup práce – trendová analýza</h3>
+<p>Vytvořím spojnicový graf s daty měsíčních teplot pro celé období 1961–2020, ve kterém budu pomocí filtru zobrazovat každou dekádu zvlášť.</p>
+<ol>
+<li>Nejdříve si udělám prostor na graf: vložím nad první řádek cca 15 nových prázdných řádků. Graf má být úplně nahoře a data (Rok, Teplota atd.) až pod ním, protože se data při filtrování mění a graf by mi mizel. Doplním do grafu popisky os s jednotkami a legendu, ať je graf kompletní.</li>
+<li>Přidám do grafu spojnici trendu: pravý klik na data v grafu → <strong>Přidat spojnici trendu</strong>. V nabídce vpravo vyberu <strong>Lineární</strong> a dole zaškrtnu <strong>Zobrazit rovnici v grafu</strong>.</li>
+<li>V grafu se objeví rovnice trendu ve tvaru <strong>y = ax + b</strong>, kde číslo <strong>a</strong> udává sklon, tedy průměrnou změnu teploty za jeden krok na ose X (známe z teplotního gradientu). Ze sklonu v dalším kroku spočítám trend změny teploty za vybrané období.</li>
+<li>Nejdříve si postupně vyfiltruju (zobrazím) každou dekádu zvlášť. Kliknu do sloupce <strong>Rok</strong> a na kartě <strong>Data</strong> zapnu <strong>Filtr</strong>. Kliknu na šipku filtru ve sloupci Rok → <strong>Filtry čísel → Mezi</strong> a zadám „je větší nebo rovno 1961“ a „je menší nebo rovno 1970“. Tím se časový rozsah grafu upraví na požadovanou dekádu a stejně tak se změní rovnice se sklonem.</li>
+<li>Přepočítám změnu (trend) teploty za dekádu. Na ose X jsou <strong>měsíce</strong>, takže číslo sklonu <strong>a</strong> je změna teploty vzduchu ve °C <strong>za jeden měsíc</strong>. Změna za dekádu je pak <strong>120 × a</strong>, protože 12 měsíců × 10 let = 120.</li>
+<li>Postup zopakuji pro každou dekádu zvlášť (1961–1970, 1971–1980, … až 2011–2020). Na konci budu mít 6 grafů pro 6 dekád a hlavně budu mít 6 hodnot popisujících trend uvnitř dekády.</li>
+</ol>
+<div class="important"><strong>Kontrolní bod:</strong>
+<ul>
+<li>Po vyfiltrování jedné dekády ukazuje graf přesně <strong>120 bodů</strong> (10 let × 12 měsíců) a je v něm vidět pravidelné „vlnění“ léto/zima.</li>
+<li>Trend za dekádu (120 × a) vychází řádově v desetinách °C. Některé dekády můžou mít i <strong>záporný</strong> trend, to je v pořádku (krátké období, velká přirozená variabilita).</li>
+<li>Pokud mi vychází změna desítky °C za dekádu, nejspíš jsem zapomněl, že a je za měsíc, nebo násobím špatně.</li>
+</ul></div>
+
+<h3>Otázky k interpretaci</h3>
+<ul>
+<li>Jak se průměrná teplota měnila po dekádách?</li>
+<li>Ve které dekádě byl nejrychlejší nárůst?</li>
+<li>Jaká je průměrná změna za dekádu?</li>
+<li>Proč se výsledek z první části cvičení (změna za dekádu) může lišit od trendu uvnitř dekády z druhé části cvičení?</li>
+</ul>
+</div>
+</details>
+
 </section>
 <section id="termin">
 <h2>Termín odevzdání</h2>
